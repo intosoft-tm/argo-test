@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/intosoft-tm/argo-test.git'
-    targetRevision: master
+    targetRevision: main
     path: bootstrap/overlays/default
   destination:
     server: 'https://kubernetes.default.svc'
