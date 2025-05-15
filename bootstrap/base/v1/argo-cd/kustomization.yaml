@@ -6,4 +6,3 @@ namespace: argocd
 resources:
   - namespace.yaml
   - install.yaml
-  - apps

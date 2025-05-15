@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ../../base/v1/argo-cd
+  - apps
