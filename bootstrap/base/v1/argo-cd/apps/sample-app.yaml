@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/argoproj/argocd-example-apps.git'
+    repoURL: 'https://github.com/intosoft-tm/argo-test.git'
     targetRevision: master
-    path: apps
+    path: bootstrap/overlays/apps/sample-app
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: app-of-apps
