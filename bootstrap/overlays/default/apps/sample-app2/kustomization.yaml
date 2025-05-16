@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: sample2
+
+resources:
+  - namespace.yaml
+  - deployment.yaml
+  - service.yaml
+
+configMapGenerator:
+  - name: nginx-hello-html
+    literals:
+      - index.html=<html><body><h1>Hello from NGINX!</h1></body></html>
