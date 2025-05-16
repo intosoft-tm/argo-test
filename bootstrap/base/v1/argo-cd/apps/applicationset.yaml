@@ -7,7 +7,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/intosoft-tm/argo-test.git
-        revision: develop
+        revision: main
         directories:
           - path: bootstrap/overlays/default/apps
   template:
@@ -17,7 +17,7 @@ spec:
       project: default
       sources:
         - repoURL: https://github.com/intosoft-tm/argo-test.git
-          targetRevision: develop
+          targetRevision: main
           path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
