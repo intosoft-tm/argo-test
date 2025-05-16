@@ -11,7 +11,7 @@ spec:
     path: bootstrap/overlays/default/apps/sample-app
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: app-of-apps
+    namespace: sample
   syncPolicy:
     automated:
       selfHeal: true
