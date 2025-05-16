@@ -7,7 +7,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/intosoft-tm/argo-test.git
-        revision: main
+        revision: HEAD
         directories:
           - path: bootstrap/overlays/default/apps
   template:
@@ -17,15 +17,13 @@ spec:
       project: default
       sources:
         - repoURL: https://github.com/intosoft-tm/argo-test.git
-          targetRevision: main
+          targetRevision: HEAD
           path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{path.basename}}'
       syncPolicy:
         automated:
-          selfHeal: true
           prune: true
-        retry:
-          limit: 5
+          selfHeal: true
 
