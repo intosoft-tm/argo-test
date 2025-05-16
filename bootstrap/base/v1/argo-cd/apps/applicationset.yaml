@@ -9,7 +9,7 @@ spec:
         repoURL: https://github.com/intosoft-tm/argo-test.git
         revision: HEAD
         directories:
-          - path: bootstrap/overlays/default/apps
+          - path: bootstrap/overlays/default/apps/*
   template:
     metadata:
       name: '{{path.basename}}'
