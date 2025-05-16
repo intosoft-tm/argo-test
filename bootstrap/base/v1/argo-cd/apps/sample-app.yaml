@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/intosoft-tm/argo-test.git'
     targetRevision: main
-    path: bootstrap/overlays/apps/sample-app
+    path: bootstrap/overlays/default/apps/sample-app
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: app-of-apps
