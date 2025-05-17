@@ -9,21 +9,22 @@ spec:
         repoURL: https://github.com/intosoft-tm/argo-test.git
         revision: HEAD
         directories:
-          - path: bootstrap/overlays/default/apps/*/*
+          - path: bootstrap/overlays/default/environment/*/*/*
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: '{{path[5]}}-{{path.basename}}'
     spec:
-      project: '{{path.basename}}'
+      project: '{{path[5]}}'
       sources:
         - repoURL: https://github.com/intosoft-tm/argo-test.git
           targetRevision: HEAD
           path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{path[4]}}-{{path.basename}}'
+        namespace: '{{path[4]}}-{{path[5]}}'
       syncPolicy:
         automated:
           prune: true
           selfHeal: true
+
 
