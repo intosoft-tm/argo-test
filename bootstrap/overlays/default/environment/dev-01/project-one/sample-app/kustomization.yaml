@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: dev-01-project-one
 
 resources:
-  - namespace.yaml
+  - ../namespace.yaml
   - deployment.yaml
   - service.yaml
 
