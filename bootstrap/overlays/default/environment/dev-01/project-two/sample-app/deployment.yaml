@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sample-two-nginx-hello
-  namespace: dev-01-project-two
 spec:
   replicas: 1
   selector:

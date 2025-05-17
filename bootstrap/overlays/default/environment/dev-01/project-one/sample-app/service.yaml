@@ -2,7 +2,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sample-one-nginx-hello
-  namespace: dev-01-project-one
 spec:
   selector:
     app: sample-one-nginx-hello
