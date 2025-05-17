@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-two
+  namespace: argocd
+spec:
+  description: Project two apps
+  sourceRepos:
+    - https://github.com/intosoft-tm/argo-test.git
+  destinations:
+    - namespace: '*'
+      server: '*'
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'

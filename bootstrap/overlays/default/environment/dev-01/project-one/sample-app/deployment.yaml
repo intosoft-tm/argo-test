@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-hello
+  name: sample-nginx-hello
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-hello
+      app: sample-nginx-hello
   template:
     metadata:
       labels:
-        app: nginx-hello
+        app: sample-nginx-hello
     spec:
       containers:
         - name: nginx
@@ -24,4 +24,4 @@ spec:
       volumes:
         - name: html
           configMap:
-            name: nginx-hello-html
+            name: sample-nginx-hello-html
