@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/intosoft-tm/argo-test.git'
     targetRevision: main
-    path: bootstrap/overlays/default
+    path: bootstrap/overlays/default/argo-cd
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
