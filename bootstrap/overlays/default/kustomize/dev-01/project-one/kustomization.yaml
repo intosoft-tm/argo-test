@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: dev-01-project-one
+
+resources:
+  - namespace.yaml
+  - ../../../environment/dev-01/project-one/sample-app
+  - ../../../environment/dev-01/project-one/sample-be-app
